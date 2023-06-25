@@ -1,6 +1,7 @@
 # library_app
 
-A new Flutter project.
+This should be an application that recreate the how a library, on your phone, works. It could be always update and try to improve the way for develop the application with the best pratices. Any advise are always appreciate. Thanks 
+
 
 ## Getting Started
 
