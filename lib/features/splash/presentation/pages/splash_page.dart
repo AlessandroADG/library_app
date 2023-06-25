@@ -11,7 +11,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(
-      Duration(
+      const Duration(
         seconds: 3,
       ),
       () => Navigator.of(context).pushReplacement(
@@ -20,13 +20,31 @@ class SplashPage extends StatelessWidget {
         ),
       ),
     );
-
-    return const Scaffold(
-      backgroundColor: Colors.green,
-      body: Center(
-        child: Text(
-          Keys.titleSplash,
-        ),
+    return Scaffold(
+      backgroundColor: Colors.amberAccent.shade100,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(
+                    20,
+                  ),
+                ),
+                border: Border.all(),
+                color: Colors.amberAccent.shade200,
+              ),
+              width: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height * 0.3,
+              child: Image.asset(
+                'assets/icons/splash_icon.png',
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
